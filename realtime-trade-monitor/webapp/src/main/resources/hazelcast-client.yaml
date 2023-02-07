@@ -6,10 +6,10 @@ hazelcast-client:
       enabled: true
       properties:
         protocol: TLSv1.2
-        trustStore: webapp/src/main/resources/client.truststore
+        trustStore: /serverless-trade-monitor-dashboard/realtime-trade-monitor/webapp/src/main/resources/client.truststore
         trustStorePassword: 
         trustStoreType: jks
-        keyStore: webapp/src/main/resources/client.keystore
+        keyStore: /serverless-trade-monitor-dashboard/realtime-trade-monitor/webapp/src/main/resources/client.keystore
         keyStorePassword: 
         keyStoreType: jks
     hazelcast-cloud:

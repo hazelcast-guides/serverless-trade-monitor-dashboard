@@ -70,7 +70,7 @@ HTTPS::
 --
 ```bash
 git clone https://github.com/hazelcast-guides/serverless-trade-monitor-dashboard.git
-cd realtime-trade-monitor
+cd serverless-trade-monitor-dashboard/realtime-trade-monitor
 ```
 --
 SSH:: 
@@ -78,7 +78,7 @@ SSH::
 --
 ```bash
 git clone git@github.com:hazelcast-guides/serverless-trade-monitor-dashboard.git
-cd realtime-trade-monitor
+cd serverless-trade-monitor-dashboard/realtime-trade-monitor
 ```
 --
 ====
@@ -111,10 +111,10 @@ hazelcast-client:
       enabled: true
       properties:
         protocol: TLSv1.2
-        trustStore: /realtime-trade-monitor/<DIRECTORY NAME>/src/main/resources/client.truststore
+        trustStore: <PATH>/serverless-trade-monitor-dashboard/realtime-trade-monitor/<DIRECTORY NAME>/src/main/resources/client.truststore
         trustStorePassword: <YOUR TRUSTSTORE PASSWORD> 
         trustStoreType: jks
-        keyStore: /realtime-trade-monitor/<DIRECTORY NAME>/src/main/resources/client.keystore
+        keyStore: <PATH>/serverless-trade-monitor-dashboard/realtime-trade-monitor/<DIRECTORY NAME>/src/main/resources/client.keystore
         keyStorePassword: <YOUR KEYSTORE PASSWORD>
         keyStoreType: jks
     hazelcast-cloud:
@@ -164,7 +164,7 @@ To allow the Java client to access the trades topic, add the connection details 
 Paste the connection details that you copied from Confluent Cloud into the following files replacing the placeholder content:
 
 - `/realtime-trade-monitor/trade-queries/src/main/resources/kafka.properties`
-- `/realtime-trade-monitor/ trade-producer/src/main/resources/kafka.properties`
+- `/realtime-trade-monitor/trade-producer/src/main/resources/kafka.properties`
 
 For example:
 
