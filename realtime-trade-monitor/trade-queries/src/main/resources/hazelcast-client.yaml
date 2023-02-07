@@ -1,0 +1,19 @@
+hazelcast-client:
+  cluster-name: 
+  instance-name: query-client
+  network:
+    ssl:
+      enabled: true
+      properties:
+        protocol: TLSv1.2
+        trustStore: trade-queries/src/main/resources/client.truststore
+        trustStorePassword: 
+        trustStoreType: jks
+        keyStore: trade-queries/src/main/resources/client.keystore
+        keyStorePassword: 
+        keyStoreType: jks
+    hazelcast-cloud:
+      discovery-token: ""
+      enabled: true
+  properties:
+    hazelcast.client.cloud.url: https://api.viridian.hazelcast.com
