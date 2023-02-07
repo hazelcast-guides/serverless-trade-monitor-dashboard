@@ -15,7 +15,7 @@
 
     <properties>
         <frontend.app.dir>${project.basedir}/src/main/app</frontend.app.dir>
-        <node.version>v10.15.0</node.version>
+        <node.version>v16.19.0</node.version>
         <yarn.version>v1.13.0</yarn.version>
     </properties>
 
