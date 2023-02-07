@@ -70,7 +70,6 @@ HTTPS::
 --
 ```bash
 git clone https://github.com/hazelcast-guides/serverless-trade-monitor-dashboard.git
-cd serverless-trade-monitor-dashboard/realtime-trade-monitor
 ```
 --
 SSH:: 
@@ -78,7 +77,6 @@ SSH::
 --
 ```bash
 git clone git@github.com:hazelcast-guides/serverless-trade-monitor-dashboard.git
-cd serverless-trade-monitor-dashboard/realtime-trade-monitor
 ```
 --
 ====
@@ -95,8 +93,8 @@ The sample project uses a Java client to connect to your {hazelcast-cloud} Serve
 . Download the keystore file. Keep the *Advanced Setup* tab open, you'll need it in later steps.
 
 . Extract the files and copy both `client.keystore` and `client.truststore` into the following directories of your cloned project:
-** `/realtime-trade-monitor/trade-queries/src/main/resources`
-** `/realtime-trade-monitor/webapp/src/main/resources`
+** `realtime-trade-monitor/trade-queries/src/main/resources`
+** `realtime-trade-monitor/webapp/src/main/resources`
 
 . In the same directories, update the `hazelcast-client.yml` files with your cluster connection credentials. You'll find these details on the *Advanced Setup* tab.
 
@@ -161,13 +159,15 @@ Next, create your Kafka topic.
 
 To allow the Java client to access the trades topic, add the connection details of the Confluent Cloud cluster to the client configuration.
 
-Paste the connection details that you copied from Confluent Cloud into the following files replacing the placeholder content:
+. Paste the connection details that you copied from Confluent Cloud into the following files replacing the placeholder content:
 
-- `/realtime-trade-monitor/trade-queries/src/main/resources/kafka.properties`
-- `/realtime-trade-monitor/trade-producer/src/main/resources/kafka.properties`
+- `realtime-trade-monitor/trade-queries/src/main/resources/kafka.properties`
+- `realtime-trade-monitor/trade-producer/src/main/resources/kafka.properties`
 
++
 For example:
 
++
 [source,properties]
 ----
   # Required connection configs for Kafka producer, consumer, and admin
@@ -186,6 +186,14 @@ For example:
 
   # Best practice for Kafka producer to prevent data loss
   acks=all
+----
+
+. Remove the following lines from both files:
+
+[source,properties]
+----
+  # Best practice for higher availability in Apache Kafka clients prior to 3.0
+  session.timeout.ms=45000
 ----
 
 [[step-five]]
