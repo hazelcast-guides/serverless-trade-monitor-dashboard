@@ -27,7 +27,7 @@ In this tutorial, you'll create a dashboard for monitoring customer's trading ac
 
 The trade monitoring application runs locally. Application components create a streaming and static data source, submit stream processing jobs to the {hazelcast-cloud} cluster, and serve data to the trade monitor dashboard. 
 
-image:ROOT:trade-monitoring-architecture.png[Architecture of trade monitoring application]
+image:ROOT:trade_monitoring_architecture.png[Architecture of trade monitoring application]
 
 Only the streaming data source is hosted on a Confluent Cloud Kafka cluster. All other trades data is hosted and processed on your {hazelcast-cloud} Serverless cluster.
 
@@ -82,7 +82,7 @@ git clone git@github.com:hazelcast-guides/serverless-trade-monitor-dashboard.git
 ====
 
 [[step-two]]
-== Step 1. Set Up the Project Files
+== Step 2. Set Up the Project Files
 
 The sample project uses a Java client to connect to your {hazelcast-cloud} Serverless cluster. To allow this connection, download the TLS certificate files from the cluster and update the client configuration.
 
@@ -116,7 +116,7 @@ hazelcast-client:
         keyStorePassword: <YOUR KEYSTORE PASSWORD>
         keyStoreType: jks
     hazelcast-cloud:
-      discovery-token: "<YOUR DISCOVERY TOKEN>"
+      discovery-token: <YOUR DISCOVERY TOKEN>
       enabled: true
   properties:
     hazelcast.client.cloud.url: https://api.viridian.hazelcast.com
@@ -290,7 +290,7 @@ NOTE: Keep this terminal window open until you complete the final step of the tu
 [[step-seven]]
 == Step 7. Process the Streaming Data
 
-In this step, you'll submit the `ingestTrades` and `AggregateQuery` stream processing jobs to your {Hazelcast-cloud} cluster. You'll also check that both jobs are running.
+In this step, you'll submit the `IngestTrades` and `AggregateQuery` stream processing jobs to your {Hazelcast-cloud} cluster. You'll also check that both jobs are running.
 
 []
 . In a new terminal window, change into the `realtime-trade-monitor/` directory. 
