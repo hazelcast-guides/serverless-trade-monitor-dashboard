@@ -1,14 +1,12 @@
 = Monitor Trades in Real-Time Using {hazelcast-cloud} Serverless
 :page-product: cloud
 :page-layout: tutorial
-:page-categories: Caching, Stream Processing
-:page-lang: java
+:page-categories: Stream Processing, Kafka
+:page-lang: Java
 :page-est-time: 30 mins
 :page-serverless: true
 :description: Deploy a Java application that updates a trade monitoring dashboard in real-time.
 :github-directory: https://github.com/hazelcast-guides/realtime-trade-monitor
-:cloud-tags: Favorites
-:cloud-order: 1
 :url-github-trade-monitor: https://github.com/hazelcast-guides/serverless-trade-monitor-dashboard/blob/master/realtime-trade-monitor
 
 {description}
