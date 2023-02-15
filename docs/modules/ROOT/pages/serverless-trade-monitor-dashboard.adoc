@@ -34,9 +34,9 @@ Only the streaming data source is hosted on a Confluent Cloud Kafka cluster. All
 
 - link:{url-github-trade-monitor}/trade-producer/src/main/java/TradeProducer.java[*`TradeProducer.java`*]: Sets up the streaming data source. This class sends a simulated feed of trades data to a Kafka topic on the Cloud Confluence cluster. 
 
-- link:{url-github-trade-monitor}/trade-queries/src/main/java/LoadSymbols.java[*`LoadSymbols.java`*]: Creates the `symbols`map on the {hazelcast-cloud} cluster that contains static stock information, which is used to enrich the streaming data after it is processed.
+- link:{url-github-trade-monitor}/trade-queries/src/main/java/LoadSymbols.java[*`LoadSymbols.java`*]: Creates the `symbols` map on the {hazelcast-cloud} cluster that contains static stock information, which is used to enrich the streaming data after it is processed.
 
-- link:{url-github-trade-monitor}/trade-queries/src/main/java/IngestTrades.java[*`IngestTrades.java`*]: Submits the `ingestTrades` job to the {hazelcast-cloud} cluster. The `ingestTrades job` creates a data pipeline that processes the stream of trade messages from the Kafka topic and writes them to the `trades` map (streaming data sink).
+- link:{url-github-trade-monitor}/trade-queries/src/main/java/IngestTrades.java[*`IngestTrades.java`*]: Submits the `ingestTrades` job to the {hazelcast-cloud} cluster. The `ingestTrades` job creates a data pipeline that processes the stream of trade messages from the Kafka topic and writes them to the `trades` map (streaming data sink).
 
 - link:{url-github-trade-monitor}/trade-queries/src/main/java/AggregateQuery.java[*`AggregateQuery.java`*]: Submits the `AggregateQuery` job, which runs in parallel with the `ingestTrades` job on the {hazelcast-cloud} cluster. The `AggregateQuery` job performs an aggregation on the trades data, grouping trades by stock symbol and keeping a running total of the quantity and values of trades. This data is written to the `query1_Results` map.
 
