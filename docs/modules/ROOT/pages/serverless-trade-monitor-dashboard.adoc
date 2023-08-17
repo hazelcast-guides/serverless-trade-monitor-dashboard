@@ -1,10 +1,9 @@
-= Monitor Trades in Real-Time Using {hazelcast-cloud} Serverless
+= Monitor Trades in Real-Time Using {hazelcast-cloud}
 :page-product: cloud
 :page-layout: tutorial
 :page-categories: Stream Processing, Kafka
 :page-lang: Java
 :page-est-time: 30 mins
-:page-serverless: true
 :description: Deploy a Java application that updates a trade monitoring dashboard in real-time.
 :github-directory: https://github.com/hazelcast-guides/realtime-trade-monitor
 :url-github-trade-monitor: https://github.com/hazelcast-guides/serverless-trade-monitor-dashboard/blob/master/realtime-trade-monitor
@@ -28,7 +27,7 @@ The trade monitoring application runs locally. Application components create a s
 
 image:ROOT:trade_monitoring_architecture.png[Architecture of trade monitoring application]
 
-Only the streaming data source is hosted on a Confluent Cloud Kafka cluster. All other trades data is hosted and processed on your {hazelcast-cloud} Serverless cluster.
+Only the streaming data source is hosted on a Confluent Cloud Kafka cluster. All other trades data is hosted and processed on a {hazelcast-cloud} Standard cluster.
 
 
 == Components
@@ -47,7 +46,7 @@ Only the streaming data source is hosted on a Confluent Cloud Kafka cluster. All
 
 You need the following:
 
-- A xref:cloud:ROOT:create-serverless-cluster.adoc[{hazelcast-cloud} Serverless cluster]. You can use either a development or production cluster.
+- A xref:cloud:ROOT:create-serverless-cluster.adoc[{hazelcast-cloud} Standard cluster]. You can use either a development or production cluster.
 
 - link:https://git-scm.com/book/en/v2/Getting-Started-Installing-Git[Git]
 
@@ -83,11 +82,11 @@ git clone git@github.com:hazelcast-guides/serverless-trade-monitor-dashboard.git
 [[step-two]]
 == Step 2. Set Up the Project Files
 
-The sample project uses a Java client to connect to your {hazelcast-cloud} Serverless cluster. To allow this connection, download the TLS certificate files from the cluster and update the client configuration.
+The sample project uses a Java client to connect to your {hazelcast-cloud} Standard cluster. To allow this connection, download the TLS certificate files from the cluster and update the client configuration.
 
-. Sign into the link:{page-cloud-console}[Hazelcast {hazelcast-cloud} console,window=_blank] and select your cluster.
+. Sign into the link:{page-cloud-console}[{hazelcast-cloud} console,window=_blank] and select your cluster.
 
-. Click *Connect Client* and select the *Advanced Setup* tab. 
+. Next to *Connect Client*, select any client and then select the *Advanced Setup* tab. 
 
 . Download the keystore file. Keep the *Advanced Setup* tab open, you'll need it in later steps.
 
