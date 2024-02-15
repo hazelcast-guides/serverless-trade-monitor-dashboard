@@ -18,10 +18,10 @@
     </modules>
 
     <properties>
-        <jdk.version>1.8</jdk.version>
-        <hazelcast.version>5.2.0</hazelcast.version>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
+        <jdk.version>11</jdk.version>
+        <hazelcast.version>5.3.6</hazelcast.version>
+        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.plugin.version>2.5.1</maven.compiler.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
