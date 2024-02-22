@@ -25,7 +25,7 @@ asciidoc:
     page-pagination: true@
     # Allows us to use UI macros. See https://docs.asciidoctor.org/asciidoc/latest/macros/ui-macros/
     page-experimental: true
-    hazelcast-cloud: Viridian
+    hazelcast-cloud: Cloud
     idprefix: ''
     idseparator: '-'
   extensions:
