@@ -16,4 +16,4 @@ hazelcast-client:
       discovery-token: 
       enabled: true
   properties:
-    hazelcast.client.cloud.url: https://api.viridian.hazelcast.com
+    hazelcast.client.cloud.url: https://api.cloud.hazelcast.com

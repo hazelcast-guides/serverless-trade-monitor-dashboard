@@ -52,7 +52,7 @@ You need the following:
 
 - link:https://maven.apache.org/install.html[Maven]
 
-- JDK 8, 9, or 11 installed and set up as the `JAVA_HOME` environment variable
+- JDK 17 or later installed and set up as the `JAVA_HOME` environment variable
 
 - A basic understanding of link:https://hazelcast.com/glossary/kafka/[Kafka].
 
@@ -117,7 +117,7 @@ hazelcast-client:
       discovery-token: <YOUR DISCOVERY TOKEN>
       enabled: true
   properties:
-    hazelcast.client.cloud.url: https://api.viridian.hazelcast.com
+    hazelcast.client.cloud.url: https://api.cloud.hazelcast.com
 
 ----
 +
